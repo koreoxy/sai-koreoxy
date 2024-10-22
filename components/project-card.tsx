@@ -1,8 +1,6 @@
 import React from "react";
 import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 import {
-  IconFileBroken,
-  IconSignature,
   IconTableColumn,
   IconCameraAi,
   IconBrandHipchat,
