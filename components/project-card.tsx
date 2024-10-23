@@ -11,8 +11,10 @@ import {
   RiTailwindCssFill,
   RiSupabaseFill,
   RiNextjsFill,
+  RiReactjsLine,
 } from "react-icons/ri";
 import { SiPrisma } from "react-icons/si";
+import { FaPython } from "react-icons/fa";
 
 export function ProjectCard() {
   return (
@@ -41,14 +43,18 @@ const Skeleton = ({
   tailwindcss: Tailwind,
   prisma: Prisma,
   supabase: Supabase,
+  reactjs: Reactjs,
+  python: Python,
 }: {
   title: string;
   nextjs?: React.ElementType;
   tailwindcss?: React.ElementType;
   prisma?: React.ElementType;
   supabase?: React.ElementType;
+  reactjs?: React.ElementType;
+  python?: React.ElementType;
 }) => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)] border border-transparent border-gray-900 dark:border-white/[0.9] bg-neutral-100 dark:bg-black relative">
+  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)] border border-transparent border-gray-600 dark:border-white/[0.9] bg-neutral-100 dark:bg-black relative">
     <div className="absolute inset-0 z-0 bg-dot-black/[0.2] rounded-xl"></div>
 
     <div className="z-10 relative flex items-center justify-center mx-auto flex-col">
@@ -58,6 +64,8 @@ const Skeleton = ({
         {Tailwind ? <Tailwind size={30} /> : null}
         {Prisma ? <Prisma size={30} /> : null}
         {Supabase ? <Supabase size={30} /> : null}
+        {Reactjs ? <Reactjs size={30} /> : null}
+        {Python ? <Python size={30} /> : null}
       </div>
     </div>
   </div>
@@ -108,10 +116,8 @@ const items = [
     header: (
       <Skeleton
         title="Calender-Hijriah"
-        nextjs={RiNextjsFill}
+        reactjs={RiReactjsLine}
         tailwindcss={RiTailwindCssFill}
-        prisma={SiPrisma}
-        supabase={RiSupabaseFill}
       />
     ),
     className: "md:col-span-1",
@@ -124,15 +130,7 @@ const items = [
     title: "Expert System Application",
     description:
       "This expert system application is a desktop application for diagnosing skin diseases, built using the Python programming language and the PySimpleGUI GUI library.",
-    header: (
-      <Skeleton
-        title="Expert System Application"
-        nextjs={RiNextjsFill}
-        tailwindcss={RiTailwindCssFill}
-        prisma={SiPrisma}
-        supabase={RiSupabaseFill}
-      />
-    ),
+    header: <Skeleton title="Expert System Application" python={FaPython} />,
     className: "md:col-span-2",
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
     SourceLink: "https://github.com/koreoxy/aplikasi-sistem-pakar",
