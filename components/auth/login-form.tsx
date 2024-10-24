@@ -24,7 +24,6 @@ import { login } from "@/actions/login";
 import { useState, useTransition } from "react";
 import Link from "next/link";
 
-// bukan page atau halaman
 export const LoginForm = () => {
   const searchParams = useSearchParams();
   const urlError =
