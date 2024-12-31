@@ -10,7 +10,7 @@ const Footer = () => {
           <h1>rayssankn@gmail.com</h1>
         </div>
         <div className="text-sm text-muted-foreground">
-          Sai - Koreoxy &copy; 2024{" "}
+          Sai - Koreoxy &copy; {new Date().getFullYear()}
         </div>
       </div>
       <Separator />

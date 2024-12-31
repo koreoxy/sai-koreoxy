@@ -15,6 +15,7 @@ import {
 } from "react-icons/ri";
 import { SiPrisma } from "react-icons/si";
 import { FaPython } from "react-icons/fa";
+import { GrArchlinux } from "react-icons/gr";
 
 export function ProjectCard() {
   return (
@@ -134,6 +135,16 @@ const items = [
     className: "md:col-span-2",
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
     SourceLink: "https://github.com/koreoxy/aplikasi-sistem-pakar",
+    SourceTitle: "Source Code",
+  },
+  {
+    title: "My Archlinux Setting",
+    description:
+      "My repo for my arch linux setting and install or setup window manager on arch linux and manjaro linux ",
+    header: <Skeleton title="My Archlinux Setting" python={GrArchlinux} />,
+    className: "md:col-span-3",
+    icon: <GrArchlinux className="h-4 w-4 text-neutral-500" />,
+    SourceLink: "https://github.com/koreoxy/my-archlinux-setting",
     SourceTitle: "Source Code",
   },
 ];
